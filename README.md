@@ -1,7 +1,7 @@
 ## HackerRank Challenge Solver
 
 This is a small program I put together to solve the "SpaceX" challenges
-on (hackerrank.com)[http://www.hackerrank.com].
+on [hackerrank.com](http://www.hackerrank.com).
 
 You can access these challenges manually by signing up/in and using the
 `challenge <N>` command. Currently, challenges 1 - 10,000 can be solved
@@ -14,14 +14,14 @@ It uses environment variables, `HACKERRANK_USERNAME` and
 
 ## Usage
 
-With (Leinigen)[https://github.com/technomancy/leiningen/] installed,
+With [Leinigen](https://github.com/technomancy/leiningen/) installed,
 you can solve challenges in batches by running the command:
 
 ```bash
  HACKERRANK_USERNAME=<username> HACKERRANK_PASSWORD=<password> lein run -m hackerrank.httpsolver 1 10
 ```
 
-This will solve 10 challenges, starting at test 1.
+This will solve 10 challenges, starting at challenge 1.
 
 After the command finishes, you could change the last two arguments to
 11 and 1000 to solve thte next 1000 challenges.
