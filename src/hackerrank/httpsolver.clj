@@ -39,7 +39,7 @@
                               :commit "Sign in"
                               :remote true}}))
 
-(defn- solve-challenges [challenges credentials]
+(defn- do-challenges [challenges credentials]
   "Solves a batch of challenges"
   (binding [clj-http.core/*cookie-store* (clj-http.cookies/cookie-store)]
     (if (login (credentials :username) (credentials :password))
@@ -55,5 +55,5 @@
   (let [start (Integer/parseInt start-challenge 10)
         end (+ start (Integer/parseInt num-challenges 10))]
     (println (str "Starting challenges " start ".." end))
-    (solve-challenges (range start end) {:username (System/getenv "HACKERRANK_USERNAME")
+    (do-challenges (range start end) {:username (System/getenv "HACKERRANK_USERNAME")
                                          :password (System/getenv "HACKERRANK_PASSWORD")})))
