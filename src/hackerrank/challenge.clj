@@ -46,7 +46,7 @@
 
 (defn- possible-diffs [word words]
   "Returns a set of all possible diffs (shift widths) for a spelled-out number"
-  (let [matching-words (filter #(= (.length %) (.length word)) words)]
+  (let [matching-words (filter #(= (count %) (count word)) words)]
     (map second
          (filter first
                  (map #(consistent-diff? word %) matching-words)))))
